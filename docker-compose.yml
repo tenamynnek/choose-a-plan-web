@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+    env_file: ./.env
+    command: yarn start
+    volumes:
+    - .:/app/
+    - /app/node_modules
+    ports:
+    - "8080:8080"
