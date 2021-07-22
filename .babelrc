@@ -1,0 +1,55 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {
+          "modules": "commonjs"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        [
+          "styled-components",
+          {
+            "minify": false,
+            "ssr": true,
+            "displayName": true
+          }
+        ]
+      ]
+    },
+    "staging": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "babel-plugin-ramda",
+        [
+          "styled-components",
+          {
+            "minify": true,
+            "ssr": true,
+            "displayName": false
+          }
+        ]
+      ]
+    },
+    "production": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "babel-plugin-ramda",
+        [
+          "styled-components",
+          {
+            "minify": true,
+            "ssr": true,
+            "displayName": false
+          }
+        ]
+      ]
+    }
+  }
+}

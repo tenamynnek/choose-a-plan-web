@@ -1,0 +1,3 @@
+{
+  "groupings": [["@modules/"], ["@route"], ["@redux"], ["@service"],  ["@ui-core"], ["@theme"],["src/"]]
+}

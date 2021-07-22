@@ -1,0 +1,3 @@
+export enum ERROR_CODE {
+  NETWORK_ERROR = 'NETWORK_ERROR'
+}
